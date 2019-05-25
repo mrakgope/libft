@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 10:33:44 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/05/24 10:48:07 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/05/22 16:12:49 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/05/22 16:57:53 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_isalnum(int c)
 {
-	int i;
-
-	while (src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	return (dst);
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	else if (c >= 0 && c <= 9)
+		return (1);
+	else
+		return (0);
 }

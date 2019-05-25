@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/24 10:33:44 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/05/24 10:48:07 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/05/23 15:29:17 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/05/24 10:25:36 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_strlen(const char *s)
 {
 	int i;
 
-	while (src[i] != '\0')
+	while (s[i] != '\0')
 	{
-		dst[i] = src[i];
-		i++;
+		i += 1;
 	}
-	return (dst);
+	return (i);
 }
