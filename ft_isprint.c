@@ -6,13 +6,15 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:42:57 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/05/27 10:41:01 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/13 12:57:34 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if (c >= 040 && c <= 176)
+	if (c >= 000 && c <= 176)
 		return (1);
 	else
 		return (0);

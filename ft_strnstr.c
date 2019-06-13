@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 11:09:20 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/12 12:41:59 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/13 10:54:21 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *ptr, const char *str, size_t len)
 {
-	int	i;
-	int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	j = 0;
 	i = 0;

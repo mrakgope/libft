@@ -6,20 +6,23 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:39:52 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/05/27 13:13:40 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/13 12:53:17 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int i;
-	int syn;
-	int rslt;
+	unsigned int	i;
+	int				syn;
+	unsigned int	rslt;
 
 	i = 0;
 	syn = 1;
 	rslt = 0;
-	if (str[i] == '\n' || str[i] == '\v' || str[i] == '\t' || str[i] == ' ')
+	if (str[i] == '\n' || str[i] == '\v' || str[i] == '\t' || str[i] == ' ' ||
+			str[i] == '\f')
 		str++;
 	if (str[i] == '-')
 	{

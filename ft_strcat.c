@@ -6,13 +6,13 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:00:24 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/03 12:31:29 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/13 12:45:49 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char	*ft_strcat(char *s1, char *s2)
 {
 	int a;
 	int b;
@@ -26,6 +26,6 @@ char	*ft_strcat(char *s1, const char *s2)
 		s1[a + b] = s2[b];
 		b++;
 	}
-	s1[a] = '\0';
+	s1[a + b] = '\0';
 	return (s1);
 }
