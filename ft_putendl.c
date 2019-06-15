@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:52:08 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/14 14:13:48 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/06/15 09:36:39 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/06/15 09:40:01 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *ptr, int c)
+void	ft_putendl(char const *s)
 {
-	while (*ptr != (char)c && *ptr != '\0')
-		ptr++;
-	if (*ptr == ((char)c))
-		return ((char *)ptr);
-	return (NULL);
+	ft_putstr(s);
+	ft_putchar("\n");
 }

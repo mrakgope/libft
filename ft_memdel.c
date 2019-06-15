@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 10:52:08 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/14 14:13:48 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/06/14 22:18:28 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/06/14 23:00:16 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_strchr(const char *ptr, int c)
+void	ft_memdel(void **ap)
 {
-	while (*ptr != (char)c && *ptr != '\0')
-		ptr++;
-	if (*ptr == ((char)c))
-		return ((char *)ptr);
-	return (NULL);
+	free( *ap);
+	ap = 0;
+}
+
+int	main()
+{
+	char ptr[5] = "Hello";
+	char *str;
+
+	str = ft_memdel((char **)ptr);
+	printf("%s\n", str);
+	return (0);
 }

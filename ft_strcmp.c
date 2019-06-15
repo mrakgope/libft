@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 12:10:44 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/13 12:50:09 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/14 14:58:41 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@ int	ft_strcmp(const char *s, const char *t)
 	unsigned int i;
 
 	i = 0;
-	while (*s != '\0')
+	while (s[i] != '\0')
 	{
-		if (*s != *t)
+		if (s[i] != t[i])
 			break ;
-		s++;
-		t++;
+		i++;
 	}
 	return (*s - *t);
 }

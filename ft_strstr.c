@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 11:33:00 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/13 12:48:56 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/14 14:28:37 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ char	*ft_strstr(char *ptr, char *str)
 		return (ptr);
 	while (ptr[j] != '\0')
 	{
-		while (str[j] != '\0')
+		while (str[i] != '\0')
 		{
-			if (ptr[i + j] != str[j])
+			if (ptr[j + i] != str[i])
 				break ;
 			j++;
 		}
-		if (str[j] != '\0')
+		if (str[i] != '\0')
 			return (ptr + i);
 		i++;
 	}
