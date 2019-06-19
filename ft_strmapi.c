@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/15 01:37:05 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/19 12:22:55 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/06/18 11:17:51 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/06/18 11:39:52 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-char	*ft_strtrim(char const *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int i;
-	unsigned int j;
+	char			*ptr;
+	unsigned int	i;
+	int				j;
 
 	i = 0;
-	j = ft_strlen(s) - 1;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	if (s[i] == '\0')
-		return (ft_strdup(s + i));
-	while ((s[j] == ' ' || s[j] == '\t' || s[j] == '\n') && j > 0)
-		j++;
-	return (ft_strsub(s, i, j - i + 1));
+	j = ft_strlen((char*)s);
+	if (*s != '\0' && *f != '\0')
+	{
+		ptr = (char*) malloc(j * sizeof(ptr));
+		{
+			ptr[i] = f(i, s[i]);
+			i++;
+		}
+		return (ptr);
+	}
+	return (0);
+}
+
+int main()
+{
+	char *ptr;
+	char str[] = "we are one";
+
+	ft_strmapi(ptr, str);
+	printf("%s\n", ptr);
+	return (0);
 }

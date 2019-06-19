@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/15 01:37:05 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/19 12:22:55 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/06/19 12:38:34 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/06/19 12:52:30 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-char	*ft_strtrim(char const *s)
+char	**ft_strsplit(char const *s, char c)
 {
-	unsigned int i;
-	unsigned int j;
+	char	*ptr;
+	int		i;
 
 	i = 0;
-	j = ft_strlen(s) - 1;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+	ptr = malloc(100 * 1000);
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			s[i] == 0;
+			i++;
+		}
+		ptr[i] = s[i];
 		i++;
-	if (s[i] == '\0')
-		return (ft_strdup(s + i));
-	while ((s[j] == ' ' || s[j] == '\t' || s[j] == '\n') && j > 0)
-		j++;
-	return (ft_strsub(s, i, j - i + 1));
+	}
+	return (ptr);
 }
