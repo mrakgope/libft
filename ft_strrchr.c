@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 12:24:21 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/14 13:01:23 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/20 12:36:30 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *ptr, int c)
 {
-	size_t i;
+	unsigned int i;
 
 	i = 0;
 	while (ptr[i] != '\0')
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *ptr, int c)
 	while (i > 0)
 	{
 		i--;
-		if (ptr[i] == ((char)ptr))
+		if (ptr[i] == (char)c)
 			return ((char *)ptr + i);
 	}
 	return (0);

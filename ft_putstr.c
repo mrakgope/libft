@@ -5,22 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/15 10:01:23 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/15 10:04:18 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/06/22 01:13:45 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/06/22 01:17:19 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr(char const *s)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		ft_putchar(s[i]);
-		i++;
+		ft_putchar(*s);
+		s++;
 	}
 }

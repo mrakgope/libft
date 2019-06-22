@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 12:10:44 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/14 14:58:41 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/20 12:26:49 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	ft_strcmp(const char *s, const char *t)
 			break ;
 		i++;
 	}
-	return (*s - *t);
+	return (s[i] - t[i]);
 }

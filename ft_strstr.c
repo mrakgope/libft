@@ -6,11 +6,11 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 11:33:00 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/14 14:28:37 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/20 12:33:27 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strstr(char *ptr, char *str)
 {
@@ -29,8 +29,8 @@ char	*ft_strstr(char *ptr, char *str)
 				break ;
 			j++;
 		}
-		if (str[i] != '\0')
-			return (ptr + i);
+		if (ptr[j] != '\0')
+			return (str + i);
 		i++;
 	}
 	return (0);
