@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 21:43:42 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/20 15:00:53 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/23 14:40:31 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 char	*ft_strnew(size_t size)
 {
 	char	*ptr;
-
-	ptr = (char*)malloc(size);
-	if (*ptr == '\0')
+	
+	if (!(ptr = (char*)malloc(size)))
 		return (0);
-	ft_memset(ptr, (int)'\0', size + 1);
+	ft_memset(ptr, '\0', size + 1);
 	return (ptr);
-	return (0);
 }

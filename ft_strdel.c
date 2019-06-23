@@ -6,18 +6,17 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 23:06:00 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/20 15:06:28 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/23 14:43:29 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_strdel(char **as)
 {
-	if (**as != '\0')
+	if (as != '\0')
 	{
 		free(*as);
-		as = 0;
+		*as = 0;
 	}
 }

@@ -6,16 +6,17 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 14:48:57 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/22 02:57:31 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/23 12:24:10 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char		*s1;
-	unsigned char		*s2;
+	unsigned char			*s1;
+	unsigned char			*s2;
 	size_t					i;
 
 	s1 = (unsigned char *)dst;
