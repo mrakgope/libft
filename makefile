@@ -6,7 +6,7 @@
 #    By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/05 11:53:38 by mrakgope          #+#    #+#              #
-#    Updated: 2019/06/22 01:06:36 by mrakgope         ###   ########.fr        #
+#    Updated: 2019/06/25 15:00:49 by mrakgope         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 	  ft_putstr.c ft_putstr_fd.c ft_strclr.c ft_strdel.c ft_strequ.c\
 	  ft_striter.c ft_striteri.c ft_strjoin.c ft_strmap.c ft_strmapi.c\
 	  ft_strnequ.c ft_strnequ.c ft_strnew.c ft_strsplit.c ft_strsub.c\
-	  ft_strtrim.c
+	  ft_strtrim.c ft_itoa.c ft_putnbr.c 
 
 OBJ = $(subst .c,.o,$(SRC))
 
