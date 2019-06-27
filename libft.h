@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 11:54:33 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/23 11:58:18 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/27 13:35:04 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ char				*ft_strchr(const char *ptr, int c);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dest, char *src);
 char				*ft_strdup(const char *str);
-size_t				ft_strlcat(char *dest, char *src, size_t size);
+size_t				ft_strlcat(char *dest, const char *src, size_t size);
 size_t				ft_strlen(const char *str);
 char				*ft_strncat(char *s, const char *t, int c);
 char				*ft_strncpy(char *dst, char *src, size_t len);
 int					ft_strncmp(const char *s, const char *t, size_t n);
 char				*ft_strnstr(const char *ptr, const char *str, size_t len);
 char				*ft_strrchr(const char *ptr, int c);
-char				*ft_strstr(char *ptr, char *str);
+char				*ft_strstr(const char *ptr, const char *str);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_itoa(int n);

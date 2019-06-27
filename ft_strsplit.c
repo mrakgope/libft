@@ -6,38 +6,71 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/19 12:38:34 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/21 23:02:44 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/27 14:22:29 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	**ft_strsplit(char const *s, char c)
+static int	word_count(const char *s, char c)
 {
-	char	**ptr;
-	size_t	i;
-	size_t	j;
-	size_t	k;
+	int		i;
+	int		timer;
 
-	if (!s || !c)
-		return (0);
-	ptr = ft_memalloc(ft_strlen(s) + 1);
 	i = 0;
-	j = 0;
-	k = 0;
-	while (s[i] != '\0')
+	timer = 0;
+	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c)
 			i++;
-		else
-		{
-			while (s[i + k] && (s[i + k] != c))
-				k++;
-			ptr[j++] = ft_strsub(s, i, k);
-			i = i + k;
-		}
+		if (s[i] != '\0' && s[i] != c)
+			timer++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
 	}
-	ptr[j] = 0;
-	return (ptr);
+	return (timer);
+}
+
+static int	wordlen(const char *str, char c)
+{
+	int		i;
+	int		timer2;
+
+	i = 0;
+	timer2 = 0;
+	while (str[i] == c)
+		i++;
+	while (str[i] != c && str[i] != '\0')
+	{
+		timer2++;
+		i++;
+	}
+	return (timer2);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
+	char	**str;
+	int		i;
+	int		i2;
+	int		i3;
+
+	if (!s || !(str = (char**)malloc(sizeof(*str) *
+					(word_count(s, c) + 1))))
+		return (0);
+	i = -1;
+	i2 = 0;
+	while (++i < word_count(s, c))
+	{
+		i3 = 0;
+		if (!(str[i] = ft_strnew(wordlen(&s[i2], c) + 1)))
+			str[i] = NULL;
+		while (s[i2] == c)
+			i2++;
+		while (s[i2] != c && s[i2])
+			str[i][i3++] = s[i2++];
+		str[i][i3] = '\0';
+	}
+	str[i] = 0;
+	return (str);
 }

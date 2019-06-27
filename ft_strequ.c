@@ -6,7 +6,7 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/15 00:57:49 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/20 15:10:15 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/27 13:46:36 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (!(*s1) || !(*s2))
+	if (!s1 || !s2)
 		return (0);
-	if (ft_strlen(s1) != ft_strlen(s2))
-		return (0);
-	while (*s1 && *s2)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (1);
+	return (!ft_strcmp(s1, s2));
 }

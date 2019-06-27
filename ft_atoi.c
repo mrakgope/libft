@@ -6,32 +6,37 @@
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:39:52 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/20 13:21:37 by mrakgope         ###   ########.fr       */
+/*   Updated: 2019/06/27 14:41:22 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	unsigned int		i;
-	int					syn;
-	unsigned int		rslt;
+	int		rslt;
+	int		syn;
+	size_t	i;
 
-	i = 0;
-	syn = 1;
 	rslt = 0;
-	while (str[i] == '\n' || str[i] == '\v' || str[i] == '\t' || str[i] == ' '
-			|| str[i] == '\f' || str[i] == '\r')
-		i++;
+	syn = 1;
+	i = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
 	if (*str == '-')
 		syn = -1;
-	if (*str == '-' || *str == '+')
+	if (*str == '+' || *str == '-')
 		str++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str == '0')
+		str++;
+	while (*str && ft_isdigit(*str))
 	{
-		rslt = rslt * 10 + str[i] - '0';
+		rslt = rslt * 10 + *str++ - '0';
 		i++;
 	}
-	return (syn * rslt);
+	if (i > 10 && syn < 0)
+		return (0);
+	if (i > 10 && syn > 0)
+		return (-1);
+	return (rslt * syn);
 }
