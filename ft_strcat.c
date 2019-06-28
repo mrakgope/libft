@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 12:00:24 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/13 12:45:49 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/06/28 13:06:19 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/06/28 13:18:01 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	int a;
-	int b;
+	int	a;
+	int	b;
 
 	a = 0;
 	b = 0;
