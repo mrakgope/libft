@@ -5,27 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrakgope <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/28 13:06:19 by mrakgope          #+#    #+#             */
-/*   Updated: 2019/06/28 13:18:01 by mrakgope         ###   ########.fr       */
+/*   Created: 2019/08/05 13:21:05 by mrakgope          #+#    #+#             */
+/*   Updated: 2019/08/05 13:42:39 by mrakgope         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int	a;
-	int	b;
+	int i;
+	int j;
 
-	a = 0;
-	b = 0;
-	while (s1[a] != '\0')
-		a++;
-	while (s2[b] != '\0')
-	{
-		s1[a + b] = s2[b];
-		b++;
-	}
-	s1[a + b] = '\0';
-	return (s1);
+	i = 0;
+	j = 0;
+	 while (s1[i] != '\0')
+		 i++;
+	 while (s2[j] != '\0')
+	 {
+		 s1[i + j] = s2[j];
+		 j++;
+	 }
+	 s1[i + j] = '\0';
+	 return (s1);
 }
